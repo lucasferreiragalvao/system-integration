@@ -27,7 +27,7 @@ public class OrderFileAdapter {
 
     private static Date formatDate(String data) {
         SimpleDateFormat formato = new SimpleDateFormat("yyyymmdd");
-        Date date = null;
+        Date date;
         try {
             date = formato.parse(data);
         } catch (ParseException e) {

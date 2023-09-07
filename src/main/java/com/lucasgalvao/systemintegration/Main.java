@@ -4,7 +4,6 @@ import com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntr
 import com.lucasgalvao.systemintegration.app.provider.file.ReadFileProvider;
 import com.lucasgalvao.systemintegration.domain.readfile.usecase.ReadFileUseCase;
 
-import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
