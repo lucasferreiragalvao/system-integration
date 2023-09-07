@@ -62,7 +62,7 @@ public class OrderResponse {
             orderResponse.setOrderId(orderEntity.getOrderId());
             orderResponse.setOrderAmount(Formatter.decimalFormat("#.00", orderEntity.getOrderAmount(), true));
 
-            orderResponse.setDateOrder(Formatter.dateformat("yyyy-mm-dd",orderEntity.getDateOrder()));
+            orderResponse.setDateOrder(Formatter.dateformat("yyyy-MM-dd",orderEntity.getDateOrder()));
             orderResponse.setProducts(ProductResponse.orderEntityToResponse(orderEntity.getProducts()));
             listOrderResponse.add(orderResponse);
         }
