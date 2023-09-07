@@ -15,7 +15,7 @@ public class InitialEntrypoint {
         try {
             String file = this.requestFile();
             System.out.println(file);
-            this.readFileInteractor.execute(file);
+            System.out.println(this.readFileInteractor.execute(file));
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
