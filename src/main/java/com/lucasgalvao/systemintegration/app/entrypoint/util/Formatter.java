@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Formatter {
     public static String dateformat(String format, Date date){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(date);
     }
 
