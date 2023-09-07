@@ -7,7 +7,7 @@ import com.lucasgalvao.systemintegration.domain.readfile.usecase.ReadFileUseCase
 import java.io.IOException;
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         ReadFileProvider readFileProvider = new ReadFileProvider();
         ReadFileUseCase readFileUseCase = new ReadFileUseCase(readFileProvider);
