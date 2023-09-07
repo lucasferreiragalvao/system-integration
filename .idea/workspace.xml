@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6b3001-086b-4497-a04a-361cc4f5f6e1" name="Changes" comment="" />
+    <list default="true" id="ee6b3001-086b-4497-a04a-361cc4f5f6e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,11 +37,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "release/v1.0.0",
-    "last_opened_file_path": "/home/galvao/Prova Senior/system-integration",
-    "project.structure.last.edited": "Modules",
+    "git-widget-placeholder": "feature/create-input-select-file-that-should-normalized",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "/home/galvao/Prova Senior/system-integration-2",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -45,7 +51,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/files" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.InitialEntrypointTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/11.0.2-open" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -61,9 +67,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InitialEntrypointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="system-integration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitialEntrypointTest.a" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="system-integration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="METHOD_NAME" value="a" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitialEntrypointTest.callInitialEntrypoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="system-integration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="METHOD_NAME" value="callInitialEntrypoint" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitialEntrypointTest.retunrGivenFileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="system-integration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="METHOD_NAME" value="retunrGivenFileName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InitialEntrypointTest" />
+        <item itemvalue="JUnit.InitialEntrypointTest.callInitialEntrypoint" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.InitialEntrypointTest.retunrGivenFileName" />
+        <item itemvalue="JUnit.InitialEntrypointTest.a" />
       </list>
     </recent_temporary>
   </component>
@@ -95,6 +168,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/domain/usecase/ReadFileUseCase.java</url>
           <line>68</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/console/file/InitialEntrypointTest.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
