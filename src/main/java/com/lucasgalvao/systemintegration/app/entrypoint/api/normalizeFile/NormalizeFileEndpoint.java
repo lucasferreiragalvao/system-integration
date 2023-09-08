@@ -38,14 +38,17 @@ public class NormalizeFileEndpoint implements HttpHandler {
 
             List<UserOrderResponse> userOrderResponse = UserOrderResponse.userOrderEntityToResponse(userOrderEntityList);
 
+
             String json = Transform.transformObjToJson(userOrderResponse);
 
-            exchange.sendResponseHeaders(200, json.getBytes().length);
+            exchange.sendResponseHeaders(200, json.length());
             OutputStream os = exchange.getResponseBody();
             os.write(json.getBytes());
             os.close();
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            exchange.sendResponseHeaders(500,0);
+            OutputStream os = exchange.getResponseBody();
+            os.close();
         }
     }
 }

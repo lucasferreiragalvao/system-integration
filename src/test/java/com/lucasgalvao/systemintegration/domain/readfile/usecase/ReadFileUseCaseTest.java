@@ -12,8 +12,8 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
@@ -21,7 +21,7 @@ public class ReadFileUseCaseTest {
 
     @InjectMocks
     @Spy
-    private ReadFileUseCase readFileUseCase;
+    private ProcessContentFileBufferUseCase readFileUseCase;
 
     @Mock
     private ReadFileGateway readFileGateway;
@@ -30,7 +30,7 @@ public class ReadFileUseCaseTest {
     @DisplayName("it should be possible to call the execute method of the gateway")
     void callMethodExecuteGateway () throws IOException {
 
-        List<UserOrderEntity> result = readFileUseCase.execute("teste.txt");
+        List<UserOrderEntity> result = readFileUseCase.execute(Collections.singletonList("teste.txt"));
 
         Mockito.verify(readFileGateway,Mockito.times(1)).execute("teste.txt");
         Assertions.assertNull(result);
