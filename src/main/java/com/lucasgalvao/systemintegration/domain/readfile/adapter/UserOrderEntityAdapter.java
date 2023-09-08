@@ -32,14 +32,14 @@ public class UserOrderEntityAdapter {
 
         List<OrderEntity> listOrderEntity = new ArrayList<>();
 
-        Map<Integer, Date> mapOrdersByUser = new HashMap<>();
+        Map<Integer, String> mapOrdersByUser = new HashMap<>();
         List<OrderFileEntity> listOrdersFileByUserId = listOrderFileEntity.stream().filter(orderFile -> orderFile.getIdUser() == idUser ).collect(Collectors.toList());
 
         for(OrderFileEntity orderUserFile: listOrdersFileByUserId){
             mapOrdersByUser.put(orderUserFile.getIdOrder(),orderUserFile.getDateOrder());
         }
 
-        for (Map.Entry<Integer,Date> itemOrderFile : mapOrdersByUser.entrySet()){
+        for (Map.Entry<Integer,String> itemOrderFile : mapOrdersByUser.entrySet()){
             OrderEntity orderEntity = new OrderEntity();
             orderEntity.setOrderId(itemOrderFile.getKey());
             orderEntity.setDateOrder(itemOrderFile.getValue());

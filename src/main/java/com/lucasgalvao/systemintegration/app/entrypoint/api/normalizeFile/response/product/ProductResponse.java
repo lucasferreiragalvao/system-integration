@@ -1,10 +1,9 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.console.file.response.product;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.product;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.lucasgalvao.systemintegration.app.entrypoint.util.Formatter;
+import com.lucasgalvao.systemintegration.util.Formatter;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.product.ProductEntity;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 

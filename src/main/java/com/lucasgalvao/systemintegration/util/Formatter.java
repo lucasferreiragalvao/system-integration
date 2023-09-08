@@ -1,4 +1,4 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.util;
+package com.lucasgalvao.systemintegration.util;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;

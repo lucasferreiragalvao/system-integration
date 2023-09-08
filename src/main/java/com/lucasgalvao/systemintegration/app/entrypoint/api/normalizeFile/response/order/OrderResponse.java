@@ -1,9 +1,8 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.console.file.response.order;
-
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.order;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.lucasgalvao.systemintegration.app.entrypoint.console.file.response.product.ProductResponse;
-import com.lucasgalvao.systemintegration.app.entrypoint.util.Formatter;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.product.ProductResponse;
+import com.lucasgalvao.systemintegration.util.Formatter;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.order.OrderEntity;
 
 import java.util.ArrayList;
@@ -57,26 +56,16 @@ public class OrderResponse {
     public static List<OrderResponse> orderEntityToResponse(List<OrderEntity> listOrderEntity) {
 
         List<OrderResponse> listOrderResponse = new ArrayList<>();
-        for(OrderEntity orderEntity : listOrderEntity) {
+        for (OrderEntity orderEntity : listOrderEntity) {
             OrderResponse orderResponse = new OrderResponse();
             orderResponse.setOrderId(orderEntity.getOrderId());
             orderResponse.setOrderAmount(Formatter.decimalFormat("#.00", orderEntity.getOrderAmount(), true));
 
-            orderResponse.setDateOrder(Formatter.dateformat("yyyy-MM-dd",orderEntity.getDateOrder()));
+            orderResponse.setDateOrder(orderEntity.getDateOrder());
             orderResponse.setProducts(ProductResponse.orderEntityToResponse(orderEntity.getProducts()));
             listOrderResponse.add(orderResponse);
         }
 
         return listOrderResponse;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderEntity{" +
-                "orderId=" + orderId +
-                ", orderAmount=" + orderAmount +
-                ", dateOrder=" + dateOrder +
-                ", products=" + products +
-                '}';
     }
 }

@@ -1,4 +1,4 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.util;
+package com.lucasgalvao.systemintegration.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
