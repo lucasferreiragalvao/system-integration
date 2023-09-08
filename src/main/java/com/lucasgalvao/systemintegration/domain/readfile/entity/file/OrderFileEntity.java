@@ -8,7 +8,7 @@ public class OrderFileEntity {
     private int idOrder;
     private int idProduct;
     private double amountProduct;
-    private Date dateOrder;
+    private String dateOrder;
 
     public int getIdUser() {
         return idUser;
@@ -50,11 +50,11 @@ public class OrderFileEntity {
         this.amountProduct = amountProduct;
     }
 
-    public Date getDateOrder() {
+    public String getDateOrder() {
         return dateOrder;
     }
 
-    public void setDateOrder(Date dateOrder) {
+    public void setDateOrder(String dateOrder) {
         this.dateOrder = dateOrder;
     }
 

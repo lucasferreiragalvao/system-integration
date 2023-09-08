@@ -1,22 +1,19 @@
 package com.lucasgalvao.systemintegration;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypoint;
-import com.lucasgalvao.systemintegration.app.provider.file.ExportFileProvider;
-import com.lucasgalvao.systemintegration.app.provider.file.ReadFileProvider;
-import com.lucasgalvao.systemintegration.domain.readfile.usecase.ExportFileUseCase;
-import com.lucasgalvao.systemintegration.domain.readfile.usecase.ReadFileUseCase;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.routes.Routes;
+import com.sun.net.httpserver.HttpServer;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        ReadFileProvider readFileProvider = new ReadFileProvider();
-        ExportFileProvider exportFileProvider = new ExportFileProvider();
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        new Routes(server);
+        server.setExecutor(null);
+        server.start();
 
-        ReadFileUseCase readFileUseCase = new ReadFileUseCase(readFileProvider);
-        ExportFileUseCase exportFileUseCase = new ExportFileUseCase(exportFileProvider);
-
-        InitialEntrypoint initialEntrypoint = new InitialEntrypoint(readFileUseCase,exportFileUseCase);
-        initialEntrypoint.initialEntrypoint();
     }
 }

@@ -1,6 +1,7 @@
 package com.lucasgalvao.systemintegration.domain.readfile.adapter;
 
 import com.lucasgalvao.systemintegration.domain.readfile.entity.file.OrderFileEntity;
+import com.lucasgalvao.systemintegration.util.Formatter;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,17 +20,18 @@ public class OrderFileAdapter {
             order.setIdOrder(Integer.parseInt(line.substring(55, 65)));
             order.setIdProduct(Integer.parseInt(line.substring(65, 75)));
             order.setAmountProduct(Double.parseDouble(line.substring(75, 87)));
-            order.setDateOrder(formatDate(line.substring(87, 95)));
+
+            order.setDateOrder(Formatter.dateformat("yyyy-mm-dd", dateOrderFile(line.substring(87,95))));
             orders.add(order);
         });
         return orders;
     }
 
-    private static Date formatDate(String data) {
-        SimpleDateFormat formato = new SimpleDateFormat("yyyymmdd");
+    private static Date dateOrderFile(String data) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyymmdd");
         Date date;
         try {
-            date = formato.parse(data);
+            date = format.parse(data);
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }

@@ -8,7 +8,7 @@ import java.util.List;
 public class OrderEntity {
     private int orderId;
     private double orderAmount;
-    private Date dateOrder;
+    private String dateOrder;
 
     private List<ProductEntity> products;
 
@@ -28,11 +28,11 @@ public class OrderEntity {
         this.orderAmount = orderAmount;
     }
 
-    public Date getDateOrder() {
+    public String getDateOrder() {
         return dateOrder;
     }
 
-    public void setDateOrder(Date dateOrder) {
+    public void setDateOrder(String dateOrder) {
         this.dateOrder = dateOrder;
     }
 

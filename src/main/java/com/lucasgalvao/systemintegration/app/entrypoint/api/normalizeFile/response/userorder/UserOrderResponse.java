@@ -1,7 +1,7 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.console.file.response.userorder;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.userorder;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.lucasgalvao.systemintegration.app.entrypoint.console.file.response.order.OrderResponse;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.order.OrderResponse;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.userorder.UserOrderEntity;
 
 import java.util.ArrayList;
@@ -52,14 +52,5 @@ public class UserOrderResponse {
         }
 
         return listUserOrderResponse;
-    }
-
-    @Override
-    public String toString() {
-        return "UserOrderEntity{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", orders=" + orders +
-                '}';
     }
 }

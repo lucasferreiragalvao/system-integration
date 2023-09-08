@@ -1,6 +1,6 @@
 package com.lucasgalvao.systemintegration.app.provider.file;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.util.Formatter;
+import com.lucasgalvao.systemintegration.util.Formatter;
 import com.lucasgalvao.systemintegration.domain.readfile.gateway.ExportFileGateway;
 
 import java.io.*;

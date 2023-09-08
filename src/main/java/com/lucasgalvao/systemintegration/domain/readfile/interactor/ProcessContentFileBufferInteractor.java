@@ -5,6 +5,6 @@ import com.lucasgalvao.systemintegration.domain.readfile.entity.userorder.UserOr
 import java.io.FileNotFoundException;
 import java.util.List;
 
-public interface ReadFileInteractor {
-    List<UserOrderEntity> execute(String dir) throws FileNotFoundException;
+public interface ProcessContentFileBufferInteractor {
+    List<UserOrderEntity> execute(List<String> linesFile) throws FileNotFoundException;
 }
