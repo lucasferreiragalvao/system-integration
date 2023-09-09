@@ -1,7 +1,7 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.order;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.order;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.product.ProductResponse;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.product.ProductResponse;
 import com.lucasgalvao.systemintegration.util.Formatter;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.order.OrderEntity;
 

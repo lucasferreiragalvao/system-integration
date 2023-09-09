@@ -1,4 +1,4 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.product;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.product;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.lucasgalvao.systemintegration.util.Formatter;

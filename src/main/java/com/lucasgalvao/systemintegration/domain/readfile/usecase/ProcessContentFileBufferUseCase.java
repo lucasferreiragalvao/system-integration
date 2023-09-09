@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ProcessContentFileBufferUseCase implements ProcessContentFileBufferInteractor {
     @Override
-    public List<UserOrderEntity> execute(List<String> buffer) throws FileNotFoundException {
+    public List<UserOrderEntity> execute(List<String> buffer)  {
         List<OrderFileEntity> orderFileEntiy = OrderFileAdapter.fileToOrderFileEntity(buffer);
         return UserOrderEntityAdapter.orderFileEntityToUserOrderEntity(orderFileEntiy);
     }

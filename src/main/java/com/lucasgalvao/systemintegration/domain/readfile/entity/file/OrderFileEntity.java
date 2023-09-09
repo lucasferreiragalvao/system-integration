@@ -57,16 +57,4 @@ public class OrderFileEntity {
     public void setDateOrder(String dateOrder) {
         this.dateOrder = dateOrder;
     }
-
-    @Override
-    public String toString() {
-        return "OrderEntity{" +
-                "idUser=" + idUser +
-                ", name='" + name + '\'' +
-                ", idOrder=" + idOrder +
-                ", idProduct=" + idProduct +
-                ", amountProduct=" + amountProduct +
-                ", dateOrder=" + dateOrder +
-                '}';
-    }
 }

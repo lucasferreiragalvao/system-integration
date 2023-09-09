@@ -1,4 +1,4 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.config.bodyparser;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser;
 
 import com.sun.net.httpserver.HttpExchange;
 
