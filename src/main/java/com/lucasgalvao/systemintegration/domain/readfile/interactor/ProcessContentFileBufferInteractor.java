@@ -6,5 +6,5 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface ProcessContentFileBufferInteractor {
-    List<UserOrderEntity> execute(List<String> linesFile) throws FileNotFoundException;
+    List<UserOrderEntity> execute(List<String> linesFile);
 }

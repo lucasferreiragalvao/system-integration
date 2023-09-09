@@ -1,7 +1,7 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.userorder;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.userorder;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.order.OrderResponse;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.order.OrderResponse;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.userorder.UserOrderEntity;
 
 import java.util.ArrayList;

@@ -33,13 +33,4 @@ public class UserOrderEntity {
     public void setOrders(List<OrderEntity> orders) {
         this.orders = orders;
     }
-
-    @Override
-    public String toString() {
-        return "UserOrderEntity{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", orders=" + orders +
-                '}';
-    }
 }

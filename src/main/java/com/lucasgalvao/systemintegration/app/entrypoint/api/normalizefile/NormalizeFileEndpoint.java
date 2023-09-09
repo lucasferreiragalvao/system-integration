@@ -1,7 +1,7 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizeFile.response.userorder.UserOrderResponse;
-import com.lucasgalvao.systemintegration.app.entrypoint.api.config.bodyparser.MiniBodyParser;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.userorder.UserOrderResponse;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.MiniBodyParser;
 import com.lucasgalvao.systemintegration.util.Transform;
 import com.lucasgalvao.systemintegration.domain.readfile.entity.userorder.UserOrderEntity;
 import com.lucasgalvao.systemintegration.domain.readfile.interactor.ProcessContentFileBufferInteractor;

@@ -19,12 +19,4 @@ public class ProductEntity {
     public void setAmountProduct(double amountProduct) {
         this.amountProduct = amountProduct;
     }
-
-    @Override
-    public String toString() {
-        return "ProductEntity{" +
-                "productId=" + productId +
-                ", amountProduct=" + amountProduct +
-                '}';
-    }
 }
