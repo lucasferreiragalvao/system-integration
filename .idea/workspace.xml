@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6b3001-086b-4497-a04a-361cc4f5f6e1" name="Changes" comment="">
+    <list default="true" id="ee6b3001-086b-4497-a04a-361cc4f5f6e1" name="Changes" comment="feat: create pipeline project">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/workflow.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/config/minibodyparser/MiniBodyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/config/minibodyparser/MiniBodyParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/config/routes/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/config/routes/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/unit/NormalizeFileEndpointTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/mock/OutputStreamMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/mock/OutputStreamMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release/v1.0.0" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -37,7 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/create-input-select-file-that-should-normalized",
+    "git-widget-placeholder": "feature/create-pipeline-project",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "/home/galvao/Prova Senior/system-integration-2",
     "project.structure.last.edited": "Libraries",
@@ -50,16 +60,17 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/files" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.InitialEntrypointTest">
+  <component name="RunManager" selected="JUnit.FormatterTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/11.0.2-open" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.Main" />
       <module name="system-integration" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.provider.file.functions.*" />
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,76 +78,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitialEntrypointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FormatterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="system-integration" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
-      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.util" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.util.FormatterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitialEntrypointTest.a" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FormatterTest.a" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="system-integration" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
-      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.util" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.util.FormatterTest" />
       <option name="METHOD_NAME" value="a" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitialEntrypointTest.callInitialEntrypoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FormatterTest.shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="system-integration" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
-      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
-      <option name="METHOD_NAME" value="callInitialEntrypoint" />
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.util" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.util.FormatterTest" />
+      <option name="METHOD_NAME" value="shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitialEntrypointTest.retunrGivenFileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NormalizeFileEndpointTestIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="system-integration" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.*" />
+          <option name="PATTERN" value="com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.unit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file" />
-      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.console.file.InitialEntrypointTest" />
-      <option name="METHOD_NAME" value="retunrGivenFileName" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.integration.NormalizeFileEndpointTestIntegration" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InitialEntrypointTest" />
-        <item itemvalue="JUnit.InitialEntrypointTest.callInitialEntrypoint" />
+        <item itemvalue="JUnit.FormatterTest" />
+        <item itemvalue="JUnit.NormalizeFileEndpointTestIntegration" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.InitialEntrypointTest.retunrGivenFileName" />
-        <item itemvalue="JUnit.InitialEntrypointTest.a" />
+        <item itemvalue="JUnit.FormatterTest.shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine" />
+        <item itemvalue="JUnit.FormatterTest.a" />
       </list>
     </recent_temporary>
   </component>
@@ -149,32 +159,171 @@
       <option name="presentableId" value="Default" />
       <updated>1693950839080</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: create tests project">
+      <option name="closed" value="true" />
+      <created>1694287640265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694287640265</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694374391488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694374391488</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694374720157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694374720157</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694374870916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694374870916</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694375165408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694375165408</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694375400969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694375400969</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694375628272</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694375628272</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694376030437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694376030437</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694376173000</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694376173000</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694376439824</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694376439824</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694376880411</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694376880411</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694377175734</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694377175734</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: create pipeline project">
+      <option name="closed" value="true" />
+      <created>1694377333128</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694377333128</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: create tests project" />
+    <MESSAGE value="feat: create pipeline project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create pipeline project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/console/file/response/UserOrderResponse.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/validate/ValidateNormalizeFile.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/domain/usecase/ReadFileUseCase.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/domain/usecase/ReadFileUseCase.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/app/entrypoint/console/file/InitialEntrypointTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/config/minibodyparser/MiniBodyParser.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucasgalvao/systemintegration/app/entrypoint/api/normalizefile/NormalizeFileEndpoint.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/lucasgalvao/systemintegration/util/FormatterTest.java</url>
+          <line>16</line>
+          <properties class="com.lucasgalvao.systemintegration.util.FormatterTest" method="shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
