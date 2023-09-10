@@ -1,5 +1,6 @@
 package com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser;
 
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.MiniBodyParser;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.MockRequest;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.RequestBodyMock;
 import com.sun.net.httpserver.HttpExchange;

@@ -1,6 +1,6 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.props.Props;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.props.Props;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.IOException;
