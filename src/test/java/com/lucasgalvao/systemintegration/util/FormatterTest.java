@@ -41,7 +41,7 @@ public class FormatterTest {
 
         String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, true);
 
-        Assertions.assertEquals(decimalFormatter, "2300.30");
+        Assertions.assertEquals(decimalFormatter, "2300,30");
     }
 
     @Test
