@@ -12,9 +12,9 @@ import java.util.Date;
 
 @ExtendWith(MockitoExtension.class)
 public class FormatterTest {
-    /*@Test
-    @DisplayName("should return listUserOrderEntity when the file has only one line")
-    void shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine ()  {
+    @Test
+    @DisplayName("should return data in the format yyyy-MM-dd")
+    void shouldReturnDataInTheFormatYYYYMMDD ()  {
 
         Date date = new Date();
         Calendar calendar = Calendar.getInstance();
@@ -36,8 +36,8 @@ public class FormatterTest {
     }
 
     @Test
-    @DisplayName("should return listUserOrderEntity when the file has only one line")
-    void a ()  {
+    @DisplayName("should return the number with two decimal places after the comma and with a period replacing the comma")
+    void shouldReturnTheNumberWithTwoDecimalPlacesAfterCommaAndWithPeriodReplacingTheComma ()  {
 
         String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, true);
 
@@ -45,11 +45,11 @@ public class FormatterTest {
     }
 
     @Test
-    @DisplayName("should return listUserOrderEntity when the file has only one line")
-    void ab ()  {
+    @DisplayName("should return the number with two decimal places after the decimal point")
+    void shouldReturnTheNumberWithTwoDecimalPlacesAftterDecimalPoint ()  {
 
-        String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, false);
+        String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, true);
 
-        Assertions.assertEquals(decimalFormatter, "2300,30");
-    }*/
+        Assertions.assertEquals("2300.30", decimalFormatter);
+    }
 }
