@@ -25,6 +25,7 @@ jobs:
 
       - name: Maven Test
         run: mvn test
+        shell: bash
 
       - run: mkdir coverage-report && cp -r target/site/jacoco/* coverage-report
 
