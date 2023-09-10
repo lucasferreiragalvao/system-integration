@@ -10,6 +10,10 @@ public class OutputStreamMock {
             public void write(int b) throws IOException {
                 return;
             }
+
+            @Override
+            public void close() {
+            }
         };
     }
 }

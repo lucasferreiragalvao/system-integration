@@ -1,5 +1,6 @@
 package com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser;
 
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.props.Props;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.IOException;
@@ -11,34 +12,47 @@ import java.util.regex.Pattern;
 
 public class MiniBodyParser {
 
-    public static Map<String,String> transformBodyParser(HttpExchange exchange) throws IOException {
+    public static Map<String, Props> transformBodyParser(HttpExchange exchange) throws IOException {
         String request = readBufferRequest(exchange);
         return getPropsRequest(splitRequestBody(request));
     }
 
-    private static Map<String, String> getPropsRequest(String[] requestBody) {
-        Map<String,String> props = new HashMap<>();
+    private static Map<String, Props> getPropsRequest(String[] requestBody) {
+
+
+        Map<String,Props> props = new HashMap<>();
 
         for(String rb : requestBody){
             Pattern patternNamePropRequest = Pattern.compile("name=\"([^\"]+)\"");
             Matcher matcherNamePropRequest = patternNamePropRequest.matcher(rb);
 
+            Props propsField = new Props();
+
             if(matcherNamePropRequest.find()){
                 String[] content = rb.split("\n",5);
                 Pattern patternContainsContentType = Pattern.compile("Content-Type: [^\\n]+");
                 Matcher matcherContainsContentType = patternContainsContentType.matcher(rb);
+
                 if(matcherContainsContentType.find()) {
-                    props.put(matcherNamePropRequest.group(1), content[4].trim());
+                    Pattern patternGetFilename = Pattern.compile("filename=\"([^\"]+)\"");
+                    Matcher matcherGetFileName = patternGetFilename.matcher(rb);
+
+                    if(matcherGetFileName.find()){
+                        propsField.setFilename(matcherGetFileName.group(1));
+                    }
+                    propsField.setValue(content[4].trim());
                 }else {
-                    props.put(matcherNamePropRequest.group(1), content[3].trim());
+                    propsField.setValue(content[3].trim());
                 }
+                props.put(matcherNamePropRequest.group(1), propsField);
             }
         }
         return props;
     }
 
     private static String[] splitRequestBody(String request){
-        return request.trim().split("----------------------------");
+        String regex = "--+";
+        return request.trim().split(regex);
     }
 
     private static String readBufferRequest(HttpExchange exchange) throws IOException {

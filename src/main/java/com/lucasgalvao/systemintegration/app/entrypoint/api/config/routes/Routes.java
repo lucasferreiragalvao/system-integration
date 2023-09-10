@@ -7,6 +7,6 @@ import com.sun.net.httpserver.HttpServer;
 public class Routes {
     public Routes(HttpServer server){
         ProcessContentFileBufferUseCase readFileUseCase = new ProcessContentFileBufferUseCase();
-        server.createContext("/normalize-file", new NormalizeFileEndpoint(readFileUseCase));
+        server.createContext("/api/normalize-file", new NormalizeFileEndpoint(readFileUseCase));
     }
 }
