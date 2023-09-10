@@ -1,5 +1,6 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.unit;
 
+import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.NormalizeFileEndpoint;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.MockRequest;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.OutputStreamMock;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.RequestBodyMock;
@@ -17,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 @ExtendWith(MockitoExtension.class)
 public class NormalizeFileEndpointTest {
@@ -62,21 +64,23 @@ public class NormalizeFileEndpointTest {
     }
 
     @Test
-    @DisplayName("should return status 500 when method return exception")
+    @DisplayName("should return status 400 when method return exception")
     void shouldReturnStatus500WhenMethodReturnExepction () throws IOException {
 
         InputStream mock = new ByteArrayInputStream("".getBytes());
 
+        OutputStream mockOutput = Mockito.mock(OutputStream.class);
+
         HttpExchange mockHttpExchange = Mockito.mock(HttpExchange.class);
         Mockito.when(mockHttpExchange.getRequestMethod()).thenReturn("POST");
-        Mockito.when(mockHttpExchange.getResponseBody()).thenReturn(OutputStreamMock.createOutputStream());
+        Mockito.when(mockHttpExchange.getResponseBody()).thenReturn(mockOutput);
         Mockito.when(mockHttpExchange.getRequestBody()).thenReturn(mock);
 
         normalizeFileEndpoint.handle(mockHttpExchange);
 
 
         Mockito.verify(processContentFileBufferInteractor,Mockito.times(0)).execute(Mockito.any());
-        Mockito.verify(mockHttpExchange,Mockito.times(1)).sendResponseHeaders(500, 0);
+        Mockito.verify(mockHttpExchange,Mockito.times(1)).sendResponseHeaders(400, 0L);
         Mockito.verify(mockHttpExchange,Mockito.times(1)).getResponseBody();
 
     }
