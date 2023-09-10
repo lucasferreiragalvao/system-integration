@@ -1,5 +1,7 @@
 package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.unit;
 
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.MiniBodyParser;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.props.Props;
 import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.NormalizeFileEndpoint;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.MockRequest;
 import com.lucasgalvao.systemintegration.app.entrypoint.mock.OutputStreamMock;
@@ -19,6 +21,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Map;
 
 @ExtendWith(MockitoExtension.class)
 public class NormalizeFileEndpointTest {
@@ -54,6 +57,9 @@ public class NormalizeFileEndpointTest {
         Mockito.when(mockHttpExchange.getRequestBody()).thenReturn(RequestBodyMock.createRequestBodyMock(MockRequest.createMockRequest()));
         Mockito.when(processContentFileBufferInteractor.execute(Mockito.anyList())).thenReturn(UserOrderEntityMock.createUserOrderEntityMock(file));
 
+        Map<String, Props> props = MiniBodyParser.transformBodyParser(mockHttpExchange);
+        Mockito.when(mockHttpExchange.getAttribute("params")).thenReturn(props);
+
         normalizeFileEndpoint.handle(mockHttpExchange);
 
 
@@ -75,6 +81,9 @@ public class NormalizeFileEndpointTest {
         Mockito.when(mockHttpExchange.getRequestMethod()).thenReturn("POST");
         Mockito.when(mockHttpExchange.getResponseBody()).thenReturn(mockOutput);
         Mockito.when(mockHttpExchange.getRequestBody()).thenReturn(mock);
+
+        Map<String, Props> props = MiniBodyParser.transformBodyParser(mockHttpExchange);
+        Mockito.when(mockHttpExchange.getAttribute("params")).thenReturn(props);
 
         normalizeFileEndpoint.handle(mockHttpExchange);
 

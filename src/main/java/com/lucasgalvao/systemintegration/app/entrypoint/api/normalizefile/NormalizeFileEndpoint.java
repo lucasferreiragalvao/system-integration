@@ -1,8 +1,7 @@
 package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.props.Props;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.props.Props;
 import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.response.userorder.UserOrderResponse;
-import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.MiniBodyParser;
 import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.validate.ErrorValidateNormalizeFile;
 import com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.validate.ValidateNormalizeFile;
 import com.lucasgalvao.systemintegration.util.Transform;
@@ -27,7 +26,8 @@ public class NormalizeFileEndpoint implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         if ("POST".equalsIgnoreCase(exchange.getRequestMethod())) {
-            handlePostNormalizedFiles(MiniBodyParser.transformBodyParser(exchange),exchange);
+            Map<String,Props> propsRequest = (Map<String, Props>) exchange.getAttribute("params");
+            handlePostNormalizedFiles(propsRequest,exchange);
         } else{
             exchange.sendResponseHeaders(405,0);
             OutputStream os = exchange.getResponseBody();

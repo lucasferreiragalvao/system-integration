@@ -1,6 +1,6 @@
 package com.lucasgalvao.systemintegration.app.entrypoint.api.normalizefile.validate;
 
-import com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.props.Props;
+import com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.props.Props;
 import com.sun.net.httpserver.HttpExchange;
 import java.util.Map;
 

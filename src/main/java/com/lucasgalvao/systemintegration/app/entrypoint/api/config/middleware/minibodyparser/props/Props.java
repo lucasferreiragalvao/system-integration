@@ -1,4 +1,4 @@
-package com.lucasgalvao.systemintegration.app.entrypoint.api.config.minibodyparser.props;
+package com.lucasgalvao.systemintegration.app.entrypoint.api.config.middleware.minibodyparser.props;
 
 public class Props {
     private String value;
