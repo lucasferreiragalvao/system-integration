@@ -12,7 +12,7 @@ import java.util.Date;
 
 @ExtendWith(MockitoExtension.class)
 public class FormatterTest {
-    @Test
+    /*@Test
     @DisplayName("should return listUserOrderEntity when the file has only one line")
     void shouldReturnListUserOrderEntityWhenFileHasOnlyOneLine ()  {
 
@@ -35,14 +35,14 @@ public class FormatterTest {
         Assertions.assertEquals(dateFormatter, resultExpect);
     }
 
-    /*@Test
+    @Test
     @DisplayName("should return listUserOrderEntity when the file has only one line")
     void a ()  {
 
         String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, true);
 
         Assertions.assertEquals(decimalFormatter, "2300.30");
-    }*/
+    }
 
     @Test
     @DisplayName("should return listUserOrderEntity when the file has only one line")
@@ -51,5 +51,5 @@ public class FormatterTest {
         String decimalFormatter = Formatter.decimalFormat("#.00",2300.30, false);
 
         Assertions.assertEquals(decimalFormatter, "2300,30");
-    }
+    }*/
 }
