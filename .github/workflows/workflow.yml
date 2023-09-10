@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     permissions: write-all
-    name: Build, Test and Deploy
+    name: Build & Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
