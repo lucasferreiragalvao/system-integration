@@ -1,6 +1,6 @@
 # System Integration
 
-## System Integration é uma api por transformar dados desnormalizados em um arquivo json normalizado
+## System Integration é uma api responsável por transformar dados desnormalizados em um arquivo json normalizado
 
 # Sumário
 
