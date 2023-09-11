@@ -83,3 +83,6 @@ curl  -X POST \
   
   Observação: o campo file deve ser enviado como multipart/formdata
 ```
+
+Exemplo de retorno
+![img.png](src/main/resources/images/img.png)
