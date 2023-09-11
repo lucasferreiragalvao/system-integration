@@ -68,3 +68,18 @@ mvn package
 E por fim:
 java -jar target/system-integration-1.0-SNAPSHOT.jar
 ```
+
+# Testando o endpoint
+```
+Exemplo de CURL para testar o endpoint:
+curl  -X POST \
+  'http://localhost:8080/api/normalize-file' \
+  --form 'file=@/home/galvao/Downloads/data_1.txt'
+  
+  Onde o caminho do arquivo deve ser do arquivo que deseja normalizar
+  
+  Caso prefira a chamada também pode ser a partir das principais ferramentas do
+  mercado para realizar requsição (Postman e Insomnia)
+  
+  Observação: o campo file deve ser enviado como multipart/formdata
+```
